@@ -1,0 +1,101 @@
+version: '2'
+networks:
+    database:
+        driver: bridge
+    redis:
+        driver: bridge
+    sentinel:
+        driver: bridge
+    mailserver:
+        driver: bridge
+services:
+    appapi:
+        build:
+            context: .
+            dockerfile: ApiApplication.Dockerfile
+        network_mode: "service:app"
+        volumes_from:
+            - sources
+        command: /var/www/application/docker/ApiApplication/bin/dev/setup_and_run.sh # only for DEV mode
+        env_file:
+            - docker/ApiApplication/env_files/main.env
+            - docker/ApiApplication/env_files/api.env
+            - docker/ApiApplication/env_files/newrelic.env
+
+    app:
+        build:
+            context: .
+            dockerfile: WebserverApiApplication.Dockerfile
+        ports:
+            - "80:80"
+            - "2222:22" # phpunit DEV mode
+            - "9001:9001" # only for DEV mode (xDebug)
+        volumes_from:
+            - sources:rw # only for DEV mode.
+        networks:
+            - database # Access to database in NW with it
+            - redis # Access to Redis in NW with it
+            - sentinel
+            - mailserver
+    uiapp:
+        build:
+            context: .
+            dockerfile: WebserverUiApplication.Dockerfile
+        volumes_from:
+            - sources:rw # only for DEV mode.
+        command: /var/www/application/docker/WebserverUiApplication/bin/dev/setup_and_run.sh # only for DEV mode
+        ports:
+            - "8080:80"
+        env_file:
+            - docker/WebserverUiApplication/env_files/main.env
+    redis:
+        image: relaxart/kubernetes-redis-cluster
+        environment:
+            MASTER: "1"
+        networks:
+            redis:
+                aliases:
+                    - redis
+
+    sentinel:
+        image: relaxart/kubernetes-redis-cluster
+        environment:
+            SENTINEL: "1"
+            MASTER_IP: "redis"
+        ports:
+            - "26379:26379"
+        networks:
+            - redis
+            - sentinel
+        depends_on:
+            - redis
+
+    appdb:
+        image: postgres:9.5
+        environment:
+            POSTGRES_PASSWORD: dop_pass
+            POSTGRES_USER: dop_user
+            POSTGRES_DB: dop_db
+        ports:
+            - 5432:5432
+        networks:
+            database:
+                aliases:
+                    - database
+
+    mailcatcher:
+        image: schickling/mailcatcher
+        ports:
+            - "1080:1080"
+        networks:
+            mailserver:
+                aliases:
+                    - mailserver
+    swaggereditor:
+        image: swaggerapi/swagger-editor
+        ports:
+            - "5000:8080"
+    sources:
+        image: ubuntu
+        volumes:
+            - ./:/var/www/application:rw

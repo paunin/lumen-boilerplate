@@ -1,0 +1,337 @@
+[2017-02-02 13:18:31] lumen.ERROR: Symfony\Component\Debug\Exception\FatalThrowableError: Using $this when not in object context in /var/www/application/bootstrap/app.php:90
+Stack trace:
+#0 /var/www/application/artisan(18): require()
+#1 {main}  
+[2017-02-02 13:26:54] lumen.ERROR: Symfony\Component\Debug\Exception\FatalThrowableError: Parse error: syntax error, unexpected 'return' (T_RETURN) in /var/www/application/routes/web.php:16
+Stack trace:
+#0 [internal function]: {closure}(Object(Laravel\Lumen\Application))
+#1 /var/www/application/vendor/laravel/lumen-framework/src/Concerns/RoutesRequests.php(91): call_user_func(Object(Closure), Object(Laravel\Lumen\Application))
+#2 /var/www/application/bootstrap/app.php(110): Laravel\Lumen\Application->group(Array, Object(Closure))
+#3 /var/www/application/artisan(18): require('/var/www/applic...')
+#4 {main}  
+[2017-02-02 15:29:31] lumen.ERROR: RuntimeException: Unable to boot ApiServiceProvider, configure an API domain or prefix. in /var/www/application/vendor/dingo/api/src/Provider/ApiServiceProvider.php:87
+Stack trace:
+#0 /var/www/application/vendor/dingo/api/src/Provider/LumenServiceProvider.php(50): Dingo\Api\Provider\ApiServiceProvider->setupConfig()
+#1 /var/www/application/vendor/dingo/api/src/Provider/ApiServiceProvider.php(48): Dingo\Api\Provider\LumenServiceProvider->setupConfig()
+#2 /var/www/application/vendor/dingo/api/src/Provider/LumenServiceProvider.php(60): Dingo\Api\Provider\ApiServiceProvider->register()
+#3 /var/www/application/vendor/laravel/lumen-framework/src/Application.php(172): Dingo\Api\Provider\LumenServiceProvider->register()
+#4 /var/www/application/bootstrap/app.php(89): Laravel\Lumen\Application->register(Object(Dingo\Api\Provider\LumenServiceProvider))
+#5 /var/www/application/public/index.php(14): require('/var/www/applic...')
+#6 {main}  
+[2017-02-02 15:33:02] lumen.ERROR: RuntimeException: Unable to boot ApiServiceProvider, configure an API domain or prefix. in /var/www/application/vendor/dingo/api/src/Provider/ApiServiceProvider.php:87
+Stack trace:
+#0 /var/www/application/vendor/dingo/api/src/Provider/LumenServiceProvider.php(50): Dingo\Api\Provider\ApiServiceProvider->setupConfig()
+#1 /var/www/application/vendor/dingo/api/src/Provider/ApiServiceProvider.php(48): Dingo\Api\Provider\LumenServiceProvider->setupConfig()
+#2 /var/www/application/vendor/dingo/api/src/Provider/LumenServiceProvider.php(60): Dingo\Api\Provider\ApiServiceProvider->register()
+#3 /var/www/application/vendor/laravel/lumen-framework/src/Application.php(172): Dingo\Api\Provider\LumenServiceProvider->register()
+#4 /var/www/application/bootstrap/app.php(89): Laravel\Lumen\Application->register(Object(Dingo\Api\Provider\LumenServiceProvider))
+#5 /var/www/application/public/index.php(14): require('/var/www/applic...')
+#6 {main}  
+[2017-02-02 15:34:27] lumen.ERROR: ErrorException: include(/var/www/application/routesapi.php): failed to open stream: No such file or directory in /var/www/application/routes/web.php:10
+Stack trace:
+#0 /var/www/application/routes/web.php(10): Laravel\Lumen\Application->Laravel\Lumen\Concerns\{closure}(2, 'include(/var/ww...', '/var/www/applic...', 10, Array)
+#1 /var/www/application/routes/web.php(10): include()
+#2 /var/www/application/bootstrap/app.php(138): require('/var/www/applic...')
+#3 [internal function]: {closure}(Object(Laravel\Lumen\Application))
+#4 /var/www/application/vendor/laravel/lumen-framework/src/Concerns/RoutesRequests.php(91): call_user_func(Object(Closure), Object(Laravel\Lumen\Application))
+#5 /var/www/application/bootstrap/app.php(139): Laravel\Lumen\Application->group(Array, Object(Closure))
+#6 /var/www/application/public/index.php(14): require('/var/www/applic...')
+#7 {main}  
+[2017-02-04 09:06:22] lumen.ERROR: Symfony\Component\Debug\Exception\FatalThrowableError: Class 'Tymon\JWTAuth\Providers\JWTAuthServiceProvider' not found in /var/www/application/vendor/laravel/lumen-framework/src/Application.php:162
+Stack trace:
+#0 /var/www/application/bootstrap/app.php(91): Laravel\Lumen\Application->register('Tymon\\JWTAuth\\P...')
+#1 /var/www/application/artisan(18): require('/var/www/applic...')
+#2 {main}  
+[2017-02-04 09:06:59] lumen.ERROR: Symfony\Component\Debug\Exception\FatalThrowableError: Class 'Tymon\JWTAuth\Providers\JWTAuthServiceProvider' not found in /var/www/application/vendor/laravel/lumen-framework/src/Application.php:162
+Stack trace:
+#0 /var/www/application/bootstrap/app.php(91): Laravel\Lumen\Application->register('Tymon\\JWTAuth\\P...')
+#1 /var/www/application/artisan(18): require('/var/www/applic...')
+#2 {main}  
+[2017-02-04 10:15:49] lumen.ERROR: Symfony\Component\Debug\Exception\FatalThrowableError: Type error: Argument 1 passed to {closure}() must be an instance of Router, instance of Dingo\Api\Routing\Router given in /var/www/application/routes/api.php:19
+Stack trace:
+#0 [internal function]: {closure}(Object(Dingo\Api\Routing\Router))
+#1 /var/www/application/vendor/dingo/api/src/Routing/Router.php(173): call_user_func(Object(Closure), Object(Dingo\Api\Routing\Router))
+#2 /var/www/application/routes/api.php(31): Dingo\Api\Routing\Router->group(Array, Object(Closure))
+#3 [internal function]: {closure}(Object(Dingo\Api\Routing\Router))
+#4 /var/www/application/vendor/dingo/api/src/Routing/Router.php(173): call_user_func(Object(Closure), Object(Dingo\Api\Routing\Router))
+#5 /var/www/application/vendor/dingo/api/src/Routing/Router.php(138): Dingo\Api\Routing\Router->group(Array, Object(Closure))
+#6 /var/www/application/routes/api.php(33): Dingo\Api\Routing\Router->version('v1', Object(Closure))
+#7 /var/www/application/routes/web.php(10): include('/var/www/applic...')
+#8 /var/www/application/bootstrap/app.php(149): require('/var/www/applic...')
+#9 [internal function]: {closure}(Object(Laravel\Lumen\Application))
+#10 /var/www/application/vendor/laravel/lumen-framework/src/Concerns/RoutesRequests.php(91): call_user_func(Object(Closure), Object(Laravel\Lumen\Application))
+#11 /var/www/application/bootstrap/app.php(150): Laravel\Lumen\Application->group(Array, Object(Closure))
+#12 /var/www/application/public/index.php(14): require('/var/www/applic...')
+#13 {main}  
+[2017-02-04 10:15:49] lumen.ERROR: Symfony\Component\Debug\Exception\FatalThrowableError: Type error: Argument 1 passed to {closure}() must be an instance of Router, instance of Dingo\Api\Routing\Router given in /var/www/application/routes/api.php:19
+Stack trace:
+#0 [internal function]: {closure}(Object(Dingo\Api\Routing\Router))
+#1 /var/www/application/vendor/dingo/api/src/Routing/Router.php(173): call_user_func(Object(Closure), Object(Dingo\Api\Routing\Router))
+#2 /var/www/application/routes/api.php(31): Dingo\Api\Routing\Router->group(Array, Object(Closure))
+#3 [internal function]: {closure}(Object(Dingo\Api\Routing\Router))
+#4 /var/www/application/vendor/dingo/api/src/Routing/Router.php(173): call_user_func(Object(Closure), Object(Dingo\Api\Routing\Router))
+#5 /var/www/application/vendor/dingo/api/src/Routing/Router.php(138): Dingo\Api\Routing\Router->group(Array, Object(Closure))
+#6 /var/www/application/routes/api.php(33): Dingo\Api\Routing\Router->version('v1', Object(Closure))
+#7 /var/www/application/routes/web.php(10): include('/var/www/applic...')
+#8 /var/www/application/bootstrap/app.php(149): require('/var/www/applic...')
+#9 [internal function]: {closure}(Object(Laravel\Lumen\Application))
+#10 /var/www/application/vendor/laravel/lumen-framework/src/Concerns/RoutesRequests.php(91): call_user_func(Object(Closure), Object(Laravel\Lumen\Application))
+#11 /var/www/application/bootstrap/app.php(150): Laravel\Lumen\Application->group(Array, Object(Closure))
+#12 /var/www/application/public/index.php(14): require('/var/www/applic...')
+#13 {main}  
+[2017-02-04 10:15:49] lumen.ERROR: Symfony\Component\Debug\Exception\FatalThrowableError: Type error: Argument 1 passed to {closure}() must be an instance of Router, instance of Dingo\Api\Routing\Router given in /var/www/application/routes/api.php:19
+Stack trace:
+#0 [internal function]: {closure}(Object(Dingo\Api\Routing\Router))
+#1 /var/www/application/vendor/dingo/api/src/Routing/Router.php(173): call_user_func(Object(Closure), Object(Dingo\Api\Routing\Router))
+#2 /var/www/application/routes/api.php(31): Dingo\Api\Routing\Router->group(Array, Object(Closure))
+#3 [internal function]: {closure}(Object(Dingo\Api\Routing\Router))
+#4 /var/www/application/vendor/dingo/api/src/Routing/Router.php(173): call_user_func(Object(Closure), Object(Dingo\Api\Routing\Router))
+#5 /var/www/application/vendor/dingo/api/src/Routing/Router.php(138): Dingo\Api\Routing\Router->group(Array, Object(Closure))
+#6 /var/www/application/routes/api.php(33): Dingo\Api\Routing\Router->version('v1', Object(Closure))
+#7 /var/www/application/routes/web.php(10): include('/var/www/applic...')
+#8 /var/www/application/bootstrap/app.php(149): require('/var/www/applic...')
+#9 [internal function]: {closure}(Object(Laravel\Lumen\Application))
+#10 /var/www/application/vendor/laravel/lumen-framework/src/Concerns/RoutesRequests.php(91): call_user_func(Object(Closure), Object(Laravel\Lumen\Application))
+#11 /var/www/application/bootstrap/app.php(150): Laravel\Lumen\Application->group(Array, Object(Closure))
+#12 /var/www/application/public/index.php(14): require('/var/www/applic...')
+#13 {main}  
+[2017-02-04 10:15:49] lumen.ERROR: Symfony\Component\Debug\Exception\FatalThrowableError: Type error: Argument 1 passed to {closure}() must be an instance of Router, instance of Dingo\Api\Routing\Router given in /var/www/application/routes/api.php:19
+Stack trace:
+#0 [internal function]: {closure}(Object(Dingo\Api\Routing\Router))
+#1 /var/www/application/vendor/dingo/api/src/Routing/Router.php(173): call_user_func(Object(Closure), Object(Dingo\Api\Routing\Router))
+#2 /var/www/application/routes/api.php(31): Dingo\Api\Routing\Router->group(Array, Object(Closure))
+#3 [internal function]: {closure}(Object(Dingo\Api\Routing\Router))
+#4 /var/www/application/vendor/dingo/api/src/Routing/Router.php(173): call_user_func(Object(Closure), Object(Dingo\Api\Routing\Router))
+#5 /var/www/application/vendor/dingo/api/src/Routing/Router.php(138): Dingo\Api\Routing\Router->group(Array, Object(Closure))
+#6 /var/www/application/routes/api.php(33): Dingo\Api\Routing\Router->version('v1', Object(Closure))
+#7 /var/www/application/routes/web.php(10): include('/var/www/applic...')
+#8 /var/www/application/bootstrap/app.php(149): require('/var/www/applic...')
+#9 [internal function]: {closure}(Object(Laravel\Lumen\Application))
+#10 /var/www/application/vendor/laravel/lumen-framework/src/Concerns/RoutesRequests.php(91): call_user_func(Object(Closure), Object(Laravel\Lumen\Application))
+#11 /var/www/application/bootstrap/app.php(150): Laravel\Lumen\Application->group(Array, Object(Closure))
+#12 /var/www/application/public/index.php(14): require('/var/www/applic...')
+#13 {main}  
+[2017-02-04 10:19:41] lumen.ERROR: Symfony\Component\Debug\Exception\FatalThrowableError: Type error: Argument 1 passed to {closure}() must be an instance of Router, instance of Dingo\Api\Routing\Router given in /var/www/application/routes/api.php:19
+Stack trace:
+#0 [internal function]: {closure}(Object(Dingo\Api\Routing\Router))
+#1 /var/www/application/vendor/dingo/api/src/Routing/Router.php(173): call_user_func(Object(Closure), Object(Dingo\Api\Routing\Router))
+#2 /var/www/application/routes/api.php(31): Dingo\Api\Routing\Router->group(Array, Object(Closure))
+#3 [internal function]: {closure}(Object(Dingo\Api\Routing\Router))
+#4 /var/www/application/vendor/dingo/api/src/Routing/Router.php(173): call_user_func(Object(Closure), Object(Dingo\Api\Routing\Router))
+#5 /var/www/application/vendor/dingo/api/src/Routing/Router.php(138): Dingo\Api\Routing\Router->group(Array, Object(Closure))
+#6 /var/www/application/routes/api.php(33): Dingo\Api\Routing\Router->version('v1', Object(Closure))
+#7 /var/www/application/routes/web.php(10): include('/var/www/applic...')
+#8 /var/www/application/bootstrap/app.php(149): require('/var/www/applic...')
+#9 [internal function]: {closure}(Object(Laravel\Lumen\Application))
+#10 /var/www/application/vendor/laravel/lumen-framework/src/Concerns/RoutesRequests.php(91): call_user_func(Object(Closure), Object(Laravel\Lumen\Application))
+#11 /var/www/application/bootstrap/app.php(150): Laravel\Lumen\Application->group(Array, Object(Closure))
+#12 /var/www/application/artisan(18): require('/var/www/applic...')
+#13 {main}  
+[2017-02-04 15:45:30] lumen.ERROR: Symfony\Component\Debug\Exception\FatalThrowableError: Type error: Argument 1 passed to Dingo\Api\Routing\Router::group() must be of the type array, object given, called in /var/www/application/routes/api.php on line 29 in /var/www/application/vendor/dingo/api/src/Routing/Router.php:149
+Stack trace:
+#0 /var/www/application/routes/api.php(29): Dingo\Api\Routing\Router->group(Object(Closure))
+#1 [internal function]: {closure}(Object(Dingo\Api\Routing\Router))
+#2 /var/www/application/vendor/dingo/api/src/Routing/Router.php(173): call_user_func(Object(Closure), Object(Dingo\Api\Routing\Router))
+#3 /var/www/application/vendor/dingo/api/src/Routing/Router.php(138): Dingo\Api\Routing\Router->group(Array, Object(Closure))
+#4 /var/www/application/routes/api.php(31): Dingo\Api\Routing\Router->version('v1', Object(Closure))
+#5 /var/www/application/routes/web.php(10): include('/var/www/applic...')
+#6 /var/www/application/bootstrap/app.php(156): require('/var/www/applic...')
+#7 [internal function]: {closure}(Object(Laravel\Lumen\Application))
+#8 /var/www/application/vendor/laravel/lumen-framework/src/Concerns/RoutesRequests.php(91): call_user_func(Object(Closure), Object(Laravel\Lumen\Application))
+#9 /var/www/application/bootstrap/app.php(157): Laravel\Lumen\Application->group(Array, Object(Closure))
+#10 /var/www/application/public/index.php(14): require('/var/www/applic...')
+#11 {main}  
+[2017-02-05 08:53:55] lumen.ERROR: ErrorException: Undefined offset: 1 in /var/www/application/app/helpers.php:21
+Stack trace:
+#0 /var/www/application/app/helpers.php(21): Laravel\Lumen\Application->Laravel\Lumen\Concerns\{closure}(8, 'Undefined offse...', '/var/www/applic...', 21, Array)
+#1 [internal function]: {closure}('')
+#2 /var/www/application/app/helpers.php(24): array_map(Object(Closure), Array)
+#3 /var/www/application/config/redis.php(7): sentinels('')
+#4 /var/www/application/vendor/laravel/lumen-framework/src/Application.php(587): require('/var/www/applic...')
+#5 /var/www/application/vendor/paunin/laravel-ps-redis/src/LaravelPSRedis/LaravelPSRedisServiceProvider.php(22): Laravel\Lumen\Application->configure('redis')
+#6 [internal function]: LaravelPSRedis\LaravelPSRedisServiceProvider->boot()
+#7 /var/www/application/vendor/illuminate/container/BoundMethod.php(28): call_user_func_array(Array, Array)
+#8 /var/www/application/vendor/illuminate/support/helpers.php(912): Illuminate\Container\BoundMethod::Illuminate\Container\{closure}()
+#9 /var/www/application/vendor/illuminate/container/BoundMethod.php(86): value(Object(Closure))
+#10 /var/www/application/vendor/illuminate/container/BoundMethod.php(30): Illuminate\Container\BoundMethod::callBoundMethod(Object(Laravel\Lumen\Application), Array, Object(Closure))
+#11 /var/www/application/vendor/illuminate/container/Container.php(524): Illuminate\Container\BoundMethod::call(Object(Laravel\Lumen\Application), Array, Array, NULL)
+#12 /var/www/application/vendor/laravel/lumen-framework/src/Application.php(176): Illuminate\Container\Container->call(Array)
+#13 /var/www/application/bootstrap/app.php(88): Laravel\Lumen\Application->register(Object(LaravelPSRedis\LaravelPSRedisServiceProvider))
+#14 /var/www/application/vendor/phpunit/phpunit/src/Util/Fileloader.php(56): include_once('/var/www/applic...')
+#15 /var/www/application/vendor/phpunit/phpunit/src/Util/Fileloader.php(38): PHPUnit_Util_Fileloader::load('/var/www/applic...')
+#16 /var/www/application/vendor/phpunit/phpunit/src/TextUI/Command.php(917): PHPUnit_Util_Fileloader::checkAndLoad('/var/www/applic...')
+#17 /var/www/application/vendor/phpunit/phpunit/src/TextUI/Command.php(742): PHPUnit_TextUI_Command->handleBootstrap('/var/www/applic...')
+#18 /var/www/application/vendor/phpunit/phpunit/src/TextUI/Command.php(129): PHPUnit_TextUI_Command->handleArguments(Array)
+#19 /var/www/application/vendor/phpunit/phpunit/src/TextUI/Command.php(118): PHPUnit_TextUI_Command->run(Array, true)
+#20 /var/www/application/vendor/phpunit/phpunit/phpunit(52): PHPUnit_TextUI_Command::main()
+#21 {main}  
+[2017-02-05 08:54:39] lumen.ERROR: ErrorException: Undefined offset: 1 in /var/www/application/app/helpers.php:21
+Stack trace:
+#0 /var/www/application/app/helpers.php(21): Laravel\Lumen\Application->Laravel\Lumen\Concerns\{closure}(8, 'Undefined offse...', '/var/www/applic...', 21, Array)
+#1 [internal function]: {closure}('')
+#2 /var/www/application/app/helpers.php(24): array_map(Object(Closure), Array)
+#3 /var/www/application/config/redis.php(7): sentinels('')
+#4 /var/www/application/vendor/laravel/lumen-framework/src/Application.php(587): require('/var/www/applic...')
+#5 /var/www/application/vendor/paunin/laravel-ps-redis/src/LaravelPSRedis/LaravelPSRedisServiceProvider.php(22): Laravel\Lumen\Application->configure('redis')
+#6 [internal function]: LaravelPSRedis\LaravelPSRedisServiceProvider->boot()
+#7 /var/www/application/vendor/illuminate/container/BoundMethod.php(28): call_user_func_array(Array, Array)
+#8 /var/www/application/vendor/illuminate/support/helpers.php(912): Illuminate\Container\BoundMethod::Illuminate\Container\{closure}()
+#9 /var/www/application/vendor/illuminate/container/BoundMethod.php(86): value(Object(Closure))
+#10 /var/www/application/vendor/illuminate/container/BoundMethod.php(30): Illuminate\Container\BoundMethod::callBoundMethod(Object(Laravel\Lumen\Application), Array, Object(Closure))
+#11 /var/www/application/vendor/illuminate/container/Container.php(524): Illuminate\Container\BoundMethod::call(Object(Laravel\Lumen\Application), Array, Array, NULL)
+#12 /var/www/application/vendor/laravel/lumen-framework/src/Application.php(176): Illuminate\Container\Container->call(Array)
+#13 /var/www/application/bootstrap/app.php(88): Laravel\Lumen\Application->register(Object(LaravelPSRedis\LaravelPSRedisServiceProvider))
+#14 /var/www/application/vendor/phpunit/phpunit/src/Util/Fileloader.php(56): include_once('/var/www/applic...')
+#15 /var/www/application/vendor/phpunit/phpunit/src/Util/Fileloader.php(38): PHPUnit_Util_Fileloader::load('/var/www/applic...')
+#16 /var/www/application/vendor/phpunit/phpunit/src/TextUI/Command.php(917): PHPUnit_Util_Fileloader::checkAndLoad('/var/www/applic...')
+#17 /var/www/application/vendor/phpunit/phpunit/src/TextUI/Command.php(742): PHPUnit_TextUI_Command->handleBootstrap('/var/www/applic...')
+#18 /var/www/application/vendor/phpunit/phpunit/src/TextUI/Command.php(129): PHPUnit_TextUI_Command->handleArguments(Array)
+#19 /var/www/application/vendor/phpunit/phpunit/src/TextUI/Command.php(118): PHPUnit_TextUI_Command->run(Array, true)
+#20 /var/www/application/vendor/phpunit/phpunit/phpunit(52): PHPUnit_TextUI_Command::main()
+#21 {main}  
+[2017-02-05 08:55:14] lumen.ERROR: ErrorException: Undefined offset: 1 in /var/www/application/app/helpers.php:21
+Stack trace:
+#0 /var/www/application/app/helpers.php(21): Laravel\Lumen\Application->Laravel\Lumen\Concerns\{closure}(8, 'Undefined offse...', '/var/www/applic...', 21, Array)
+#1 [internal function]: {closure}('')
+#2 /var/www/application/app/helpers.php(24): array_map(Object(Closure), Array)
+#3 /var/www/application/config/redis.php(7): sentinels('')
+#4 /var/www/application/vendor/laravel/lumen-framework/src/Application.php(587): require('/var/www/applic...')
+#5 /var/www/application/vendor/paunin/laravel-ps-redis/src/LaravelPSRedis/LaravelPSRedisServiceProvider.php(22): Laravel\Lumen\Application->configure('redis')
+#6 [internal function]: LaravelPSRedis\LaravelPSRedisServiceProvider->boot()
+#7 /var/www/application/vendor/illuminate/container/BoundMethod.php(28): call_user_func_array(Array, Array)
+#8 /var/www/application/vendor/illuminate/support/helpers.php(912): Illuminate\Container\BoundMethod::Illuminate\Container\{closure}()
+#9 /var/www/application/vendor/illuminate/container/BoundMethod.php(86): value(Object(Closure))
+#10 /var/www/application/vendor/illuminate/container/BoundMethod.php(30): Illuminate\Container\BoundMethod::callBoundMethod(Object(Laravel\Lumen\Application), Array, Object(Closure))
+#11 /var/www/application/vendor/illuminate/container/Container.php(524): Illuminate\Container\BoundMethod::call(Object(Laravel\Lumen\Application), Array, Array, NULL)
+#12 /var/www/application/vendor/laravel/lumen-framework/src/Application.php(176): Illuminate\Container\Container->call(Array)
+#13 /var/www/application/bootstrap/app.php(88): Laravel\Lumen\Application->register(Object(LaravelPSRedis\LaravelPSRedisServiceProvider))
+#14 /var/www/application/vendor/phpunit/phpunit/src/Util/Fileloader.php(56): include_once('/var/www/applic...')
+#15 /var/www/application/vendor/phpunit/phpunit/src/Util/Fileloader.php(38): PHPUnit_Util_Fileloader::load('/var/www/applic...')
+#16 /var/www/application/vendor/phpunit/phpunit/src/TextUI/Command.php(917): PHPUnit_Util_Fileloader::checkAndLoad('/var/www/applic...')
+#17 /var/www/application/vendor/phpunit/phpunit/src/TextUI/Command.php(742): PHPUnit_TextUI_Command->handleBootstrap('/var/www/applic...')
+#18 /var/www/application/vendor/phpunit/phpunit/src/TextUI/Command.php(129): PHPUnit_TextUI_Command->handleArguments(Array)
+#19 /var/www/application/vendor/phpunit/phpunit/src/TextUI/Command.php(118): PHPUnit_TextUI_Command->run(Array, true)
+#20 /var/www/application/vendor/phpunit/phpunit/phpunit(52): PHPUnit_TextUI_Command::main()
+#21 {main}  
+[2017-02-05 10:15:44] lumen.ERROR: ErrorException: Undefined index: version in /var/www/application/vendor/dingo/api/src/Routing/Router.php:415
+Stack trace:
+#0 /var/www/application/vendor/dingo/api/src/Routing/Router.php(415): Laravel\Lumen\Application->Laravel\Lumen\Concerns\{closure}(8, 'Undefined index...', '/var/www/applic...', 415, Array)
+#1 /var/www/application/vendor/dingo/api/src/Routing/Router.php(188): Dingo\Api\Routing\Router->addRoute(Array, '/auth/facebook', Array)
+#2 /var/www/application/routes/web.php(12): Dingo\Api\Routing\Router->get('auth/facebook', 'App\\Http\\Contro...')
+#3 /var/www/application/bootstrap/app.php(156): require('/var/www/applic...')
+#4 [internal function]: PHPUnit_Util_Fileloader::{closure}(Object(Laravel\Lumen\Application))
+#5 /var/www/application/vendor/laravel/lumen-framework/src/Concerns/RoutesRequests.php(91): call_user_func(Object(Closure), Object(Laravel\Lumen\Application))
+#6 /var/www/application/bootstrap/app.php(157): Laravel\Lumen\Application->group(Array, Object(Closure))
+#7 /var/www/application/vendor/phpunit/phpunit/src/Util/Fileloader.php(56): include_once('/var/www/applic...')
+#8 /var/www/application/vendor/phpunit/phpunit/src/Util/Fileloader.php(38): PHPUnit_Util_Fileloader::load('/var/www/applic...')
+#9 /var/www/application/vendor/phpunit/phpunit/src/TextUI/Command.php(917): PHPUnit_Util_Fileloader::checkAndLoad('/var/www/applic...')
+#10 /var/www/application/vendor/phpunit/phpunit/src/TextUI/Command.php(742): PHPUnit_TextUI_Command->handleBootstrap('/var/www/applic...')
+#11 /var/www/application/vendor/phpunit/phpunit/src/TextUI/Command.php(129): PHPUnit_TextUI_Command->handleArguments(Array)
+#12 /var/www/application/vendor/phpunit/phpunit/src/TextUI/Command.php(118): PHPUnit_TextUI_Command->run(Array, true)
+#13 /var/www/application/vendor/phpunit/phpunit/phpunit(52): PHPUnit_TextUI_Command::main()
+#14 {main}  
+[2017-02-05 10:25:00] lumen.ERROR: ErrorException: Undefined variable: app in /var/www/application/routes/api.php:10
+Stack trace:
+#0 /var/www/application/routes/api.php(10): Laravel\Lumen\Application->Laravel\Lumen\Concerns\{closure}(8, 'Undefined varia...', '/var/www/applic...', 10, Array)
+#1 [internal function]: {closure}(Object(Dingo\Api\Routing\Router))
+#2 /var/www/application/vendor/dingo/api/src/Routing/Router.php(173): call_user_func(Object(Closure), Object(Dingo\Api\Routing\Router))
+#3 /var/www/application/vendor/dingo/api/src/Routing/Router.php(138): Dingo\Api\Routing\Router->group(Array, Object(Closure))
+#4 /var/www/application/routes/api.php(39): Dingo\Api\Routing\Router->version('v1', Object(Closure))
+#5 /var/www/application/bootstrap/app.php(156): require('/var/www/applic...')
+#6 [internal function]: {closure}(Object(Laravel\Lumen\Application))
+#7 /var/www/application/vendor/laravel/lumen-framework/src/Concerns/RoutesRequests.php(91): call_user_func(Object(Closure), Object(Laravel\Lumen\Application))
+#8 /var/www/application/bootstrap/app.php(157): Laravel\Lumen\Application->group(Array, Object(Closure))
+#9 /var/www/application/public/index.php(14): require('/var/www/applic...')
+#10 {main}  
+[2017-02-11 08:38:50] lumen.ERROR: Symfony\Component\Debug\Exception\FatalThrowableError: Call to undefined method Laravel\Lumen\Application::share() in /var/www/application/vendor/intouch/laravel-newrelic/src/Intouch/LaravelNewrelic/LumenNewrelicServiceProvider.php:19
+Stack trace:
+#0 /var/www/application/vendor/laravel/lumen-framework/src/Application.php(172): Intouch\LaravelNewrelic\LumenNewrelicServiceProvider->register()
+#1 /var/www/application/bootstrap/app.php(94): Laravel\Lumen\Application->register(Object(Intouch\LaravelNewrelic\LumenNewrelicServiceProvider))
+#2 /var/www/application/public/index.php(14): require('/var/www/applic...')
+#3 {main}  
+[2017-02-11 08:38:50] lumen.ERROR: Symfony\Component\Debug\Exception\FatalThrowableError: Call to undefined method Laravel\Lumen\Application::share() in /var/www/application/vendor/intouch/laravel-newrelic/src/Intouch/LaravelNewrelic/LumenNewrelicServiceProvider.php:19
+Stack trace:
+#0 /var/www/application/vendor/laravel/lumen-framework/src/Application.php(172): Intouch\LaravelNewrelic\LumenNewrelicServiceProvider->register()
+#1 /var/www/application/bootstrap/app.php(94): Laravel\Lumen\Application->register(Object(Intouch\LaravelNewrelic\LumenNewrelicServiceProvider))
+#2 /var/www/application/public/index.php(14): require('/var/www/applic...')
+#3 {main}  
+[2017-02-11 08:41:32] lumen.ERROR: ErrorException: Illegal offset type in unset in /var/www/application/vendor/illuminate/container/Container.php:988
+Stack trace:
+#0 /var/www/application/vendor/illuminate/container/Container.php(988): Laravel\Lumen\Application->Laravel\Lumen\Concerns\{closure}(2, 'Illegal offset ...', '/var/www/applic...', 988, Array)
+#1 /var/www/application/vendor/illuminate/container/Container.php(204): Illuminate\Container\Container->dropStaleInstances(Object(Closure))
+#2 /var/www/application/vendor/illuminate/container/Container.php(315): Illuminate\Container\Container->bind(Object(Closure), NULL, true)
+#3 /var/www/application/vendor/intouch/laravel-newrelic/src/Intouch/LaravelNewrelic/LumenNewrelicServiceProvider.php(22): Illuminate\Container\Container->singleton(Object(Closure))
+#4 /var/www/application/vendor/laravel/lumen-framework/src/Application.php(172): Intouch\LaravelNewrelic\LumenNewrelicServiceProvider->register()
+#5 /var/www/application/bootstrap/app.php(94): Laravel\Lumen\Application->register(Object(Intouch\LaravelNewrelic\LumenNewrelicServiceProvider))
+#6 /var/www/application/public/index.php(14): require('/var/www/applic...')
+#7 {main}  
+[2017-02-11 08:41:32] lumen.ERROR: ErrorException: Illegal offset type in unset in /var/www/application/vendor/illuminate/container/Container.php:988
+Stack trace:
+#0 /var/www/application/vendor/illuminate/container/Container.php(988): Laravel\Lumen\Application->Laravel\Lumen\Concerns\{closure}(2, 'Illegal offset ...', '/var/www/applic...', 988, Array)
+#1 /var/www/application/vendor/illuminate/container/Container.php(204): Illuminate\Container\Container->dropStaleInstances(Object(Closure))
+#2 /var/www/application/vendor/illuminate/container/Container.php(315): Illuminate\Container\Container->bind(Object(Closure), NULL, true)
+#3 /var/www/application/vendor/intouch/laravel-newrelic/src/Intouch/LaravelNewrelic/LumenNewrelicServiceProvider.php(22): Illuminate\Container\Container->singleton(Object(Closure))
+#4 /var/www/application/vendor/laravel/lumen-framework/src/Application.php(172): Intouch\LaravelNewrelic\LumenNewrelicServiceProvider->register()
+#5 /var/www/application/bootstrap/app.php(94): Laravel\Lumen\Application->register(Object(Intouch\LaravelNewrelic\LumenNewrelicServiceProvider))
+#6 /var/www/application/public/index.php(14): require('/var/www/applic...')
+#7 {main}  
+[2017-02-11 10:53:21] lumen.ERROR: PDOException: SQLSTATE[08006] [7] could not connect to server: No such file or directory
+	Is the server running locally and accepting
+	connections on Unix domain socket "/var/run/postgresql/.s.PGSQL.5432"? in /var/www/application/vendor/illuminate/database/Connectors/Connector.php:68
+Stack trace:
+#0 /var/www/application/vendor/illuminate/database/Connectors/Connector.php(68): PDO->__construct('pgsql:dbname=', NULL, NULL, Array)
+#1 /var/www/application/vendor/illuminate/database/Connectors/Connector.php(43): Illuminate\Database\Connectors\Connector->createPdoConnection('pgsql:dbname=', NULL, NULL, Array)
+#2 /var/www/application/vendor/illuminate/database/Connectors/PostgresConnector.php(33): Illuminate\Database\Connectors\Connector->createConnection('pgsql:dbname=', Array, Array)
+#3 /var/www/application/vendor/illuminate/database/Connectors/ConnectionFactory.php(183): Illuminate\Database\Connectors\PostgresConnector->connect(Array)
+#4 [internal function]: Illuminate\Database\Connectors\ConnectionFactory->Illuminate\Database\Connectors\{closure}()
+#5 /var/www/application/vendor/illuminate/database/Connection.php(882): call_user_func(Object(Closure))
+#6 /var/www/application/vendor/illuminate/database/Connection.php(445): Illuminate\Database\Connection->getPdo()
+#7 /var/www/application/vendor/illuminate/database/Connection.php(640): Illuminate\Database\Connection->Illuminate\Database\{closure}('drop table "tes...', Array)
+#8 /var/www/application/vendor/illuminate/database/Connection.php(607): Illuminate\Database\Connection->runQueryCallback('drop table "tes...', Array, Object(Closure))
+#9 /var/www/application/vendor/illuminate/database/Connection.php(450): Illuminate\Database\Connection->run('drop table "tes...', Array, Object(Closure))
+#10 /var/www/application/vendor/illuminate/database/Schema/Blueprint.php(83): Illuminate\Database\Connection->statement('drop table "tes...')
+#11 /var/www/application/vendor/illuminate/database/Schema/Builder.php(239): Illuminate\Database\Schema\Blueprint->build(Object(Illuminate\Database\PostgresConnection), Object(Illuminate\Database\Schema\Grammars\PostgresGrammar))
+#12 /var/www/application/vendor/illuminate/database/Schema/Builder.php(177): Illuminate\Database\Schema\Builder->build(Object(Illuminate\Database\Schema\Blueprint))
+#13 /var/www/application/vendor/illuminate/support/Facades/Facade.php(221): Illuminate\Database\Schema\Builder->drop('test_uuids')
+#14 /var/www/application/tests/Behaviour/Traits/Model/UuidModelTraitTest.php(36): Illuminate\Support\Facades\Facade::__callStatic('drop', Array)
+#15 /var/www/application/vendor/phpunit/phpunit/src/Framework/TestCase.php(1021): Test\Behaviour\Traits\Model\UuidModelTraitTest->tearDown()
+#16 /var/www/application/vendor/phpunit/phpunit/src/Framework/TestResult.php(709): PHPUnit_Framework_TestCase->runBare()
+#17 /var/www/application/vendor/phpunit/phpunit/src/Framework/TestCase.php(927): PHPUnit_Framework_TestResult->run(Object(Test\Behaviour\Traits\Model\UuidModelTraitTest))
+#18 /var/www/application/vendor/phpunit/phpunit/src/Framework/TestSuite.php(728): PHPUnit_Framework_TestCase->run(Object(PHPUnit_Framework_TestResult))
+#19 /var/www/application/vendor/phpunit/phpunit/src/Framework/TestSuite.php(728): PHPUnit_Framework_TestSuite->run(Object(PHPUnit_Framework_TestResult))
+#20 /var/www/application/vendor/phpunit/phpunit/src/Framework/TestSuite.php(728): PHPUnit_Framework_TestSuite->run(Object(PHPUnit_Framework_TestResult))
+#21 /var/www/application/vendor/phpunit/phpunit/src/TextUI/TestRunner.php(491): PHPUnit_Framework_TestSuite->run(Object(PHPUnit_Framework_TestResult))
+#22 /var/www/application/vendor/phpunit/phpunit/src/TextUI/Command.php(188): PHPUnit_TextUI_TestRunner->doRun(Object(PHPUnit_Framework_TestSuite), Array, true)
+#23 /var/www/application/vendor/phpunit/phpunit/src/TextUI/Command.php(118): PHPUnit_TextUI_Command->run(Array, true)
+#24 /var/www/application/vendor/phpunit/phpunit/phpunit(52): PHPUnit_TextUI_Command::main()
+#25 {main}  
+[2017-02-11 10:53:21] lumen.ERROR: PDOException: SQLSTATE[08006] [7] could not connect to server: No such file or directory
+	Is the server running locally and accepting
+	connections on Unix domain socket "/var/run/postgresql/.s.PGSQL.5432"? in /var/www/application/vendor/illuminate/database/Connectors/Connector.php:68
+Stack trace:
+#0 /var/www/application/vendor/illuminate/database/Connectors/Connector.php(68): PDO->__construct('pgsql:dbname=', NULL, NULL, Array)
+#1 /var/www/application/vendor/illuminate/database/Connectors/Connector.php(43): Illuminate\Database\Connectors\Connector->createPdoConnection('pgsql:dbname=', NULL, NULL, Array)
+#2 /var/www/application/vendor/illuminate/database/Connectors/PostgresConnector.php(33): Illuminate\Database\Connectors\Connector->createConnection('pgsql:dbname=', Array, Array)
+#3 /var/www/application/vendor/illuminate/database/Connectors/ConnectionFactory.php(183): Illuminate\Database\Connectors\PostgresConnector->connect(Array)
+#4 [internal function]: Illuminate\Database\Connectors\ConnectionFactory->Illuminate\Database\Connectors\{closure}()
+#5 /var/www/application/vendor/illuminate/database/Connection.php(882): call_user_func(Object(Closure))
+#6 /var/www/application/vendor/illuminate/database/Connection.php(445): Illuminate\Database\Connection->getPdo()
+#7 /var/www/application/vendor/illuminate/database/Connection.php(640): Illuminate\Database\Connection->Illuminate\Database\{closure}('drop table "tes...', Array)
+#8 /var/www/application/vendor/illuminate/database/Connection.php(607): Illuminate\Database\Connection->runQueryCallback('drop table "tes...', Array, Object(Closure))
+#9 /var/www/application/vendor/illuminate/database/Connection.php(450): Illuminate\Database\Connection->run('drop table "tes...', Array, Object(Closure))
+#10 /var/www/application/vendor/illuminate/database/Schema/Blueprint.php(83): Illuminate\Database\Connection->statement('drop table "tes...')
+#11 /var/www/application/vendor/illuminate/database/Schema/Builder.php(239): Illuminate\Database\Schema\Blueprint->build(Object(Illuminate\Database\PostgresConnection), Object(Illuminate\Database\Schema\Grammars\PostgresGrammar))
+#12 /var/www/application/vendor/illuminate/database/Schema/Builder.php(177): Illuminate\Database\Schema\Builder->build(Object(Illuminate\Database\Schema\Blueprint))
+#13 /var/www/application/vendor/illuminate/support/Facades/Facade.php(221): Illuminate\Database\Schema\Builder->drop('test_uuids')
+#14 /var/www/application/tests/Behaviour/Traits/Model/UuidModelTraitTest.php(36): Illuminate\Support\Facades\Facade::__callStatic('drop', Array)
+#15 /var/www/application/vendor/phpunit/phpunit/src/Framework/TestCase.php(1021): Test\Behaviour\Traits\Model\UuidModelTraitTest->tearDown()
+#16 /var/www/application/vendor/phpunit/phpunit/src/Framework/TestResult.php(709): PHPUnit_Framework_TestCase->runBare()
+#17 /var/www/application/vendor/phpunit/phpunit/src/Framework/TestCase.php(927): PHPUnit_Framework_TestResult->run(Object(Test\Behaviour\Traits\Model\UuidModelTraitTest))
+#18 /var/www/application/vendor/phpunit/phpunit/src/Framework/TestSuite.php(728): PHPUnit_Framework_TestCase->run(Object(PHPUnit_Framework_TestResult))
+#19 /var/www/application/vendor/phpunit/phpunit/src/Framework/TestSuite.php(728): PHPUnit_Framework_TestSuite->run(Object(PHPUnit_Framework_TestResult))
+#20 /var/www/application/vendor/phpunit/phpunit/src/Framework/TestSuite.php(728): PHPUnit_Framework_TestSuite->run(Object(PHPUnit_Framework_TestResult))
+#21 /var/www/application/vendor/phpunit/phpunit/src/TextUI/TestRunner.php(491): PHPUnit_Framework_TestSuite->run(Object(PHPUnit_Framework_TestResult))
+#22 /var/www/application/vendor/phpunit/phpunit/src/TextUI/Command.php(188): PHPUnit_TextUI_TestRunner->doRun(Object(PHPUnit_Framework_TestSuite), Array, true)
+#23 /var/www/application/vendor/phpunit/phpunit/src/TextUI/Command.php(118): PHPUnit_TextUI_Command->run(Array, true)
+#24 /var/www/application/vendor/phpunit/phpunit/phpunit(52): PHPUnit_TextUI_Command::main()
+#25 {main}  
